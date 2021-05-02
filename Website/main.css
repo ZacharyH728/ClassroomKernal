@@ -1,0 +1,118 @@
+.navbar {
+    background-color: royalblue;
+    height: 50px;
+}
+.addButton {
+    position: absolute;
+    right: 50px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: larger;
+}
+.addButton:hover {
+    text-shadow: 5px 5px 10px white;
+}
+.classForm {
+    z-index: 100;
+    border: solid;
+    right: 50%;
+    left: 35%;
+    border-width: 7px;
+    border-color: royalblue;
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    height: fit-content;
+    width: 30vw;
+    text-align: center;
+    border-radius: 15px;
+}
+.exitButton {
+    display: inline;
+    position: absolute;
+    vertical-align: middle;
+    right: 2%;
+    top: 2%;
+    height: 20px;
+    background-image: url('cross.svg');
+    border: 1 1 1 1;
+}
+.exitButton:hover {
+    border: none;
+    opacity: 80%;
+    border-color: transparent;
+}
+.box {
+    background-color: white;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 1%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    border: solid;
+    border-color: royalblue;
+    width: 20%;
+    height: fit-content;
+    font-size: 1.5vw;
+    padding-bottom: .5%;
+    padding-left: .5%;
+
+}
+.box p {
+    text-align: left;
+    display: inline;
+    vertical-align: middle;
+}
+.loginBox {
+    font-size: larger;
+    position: relative;
+    border: royalblue;
+    border-radius: 15px;
+    background-color: royalblue;
+    text-align: center;
+    padding: 1%;
+    left: 40%;
+    width: fit-content;
+    top: 20vh;
+    padding-bottom: 0.01%;
+}
+.usernameBox {
+    border-radius: 5px;
+    border-color: royalblue;
+    font-size: larger
+}
+.passwordBox {
+    margin-top: 1%;
+    border-radius: 5px;
+    border-color: royalblue;
+    font-size: larger;
+}
+.signButton {
+    border: solid;
+    border-color: royalblue;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 2%;
+    font-size: 150%;
+}
+.signButton:hover{
+    color: royalblue;
+}
+.signButton:focus {
+    color: royalblue;
+}
+.errorResponse {
+    margin-top: 2%;
+    font-size: 100%;
+    vertical-align: bottom;
+}
+.eye {
+    vertical-align: middle;
+    right: 7%;
+    top: 39.5%;
+    z-index: 10;
+    position: absolute;
+    width: 3vh;
+    height: auto;
+}
