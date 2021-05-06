@@ -2,9 +2,14 @@
     background-color: royalblue;
     height: 50px;
 }
-.addButton {
+.rightButtonGrouping {
     position: absolute;
-    right: 50px;
+    right: 1%;
+    width: fit-content;
+    text-align: center;
+    padding-top: .1%;
+}
+.addButton {
     border: none;
     background-color: transparent;
     color: white;
@@ -12,6 +17,47 @@
 }
 .addButton:hover {
     text-shadow: 5px 5px 10px white;
+}
+.logoutButton {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: larger;
+}
+.logoutButton:hover {
+    text-shadow: 5px 5px 10px white;
+}
+.dropdownButton {
+    height: 35px;
+    position: relative;
+    vertical-align: top;
+    background-color: transparent;
+    font-size: larger;
+    color: royalblue;
+}
+.dropdownButton:hover {
+    text-shadow: 5px 5px 10px white;
+}
+.dropdownContent {
+    top: 150%;
+    z-index: 100;
+    display: none;
+    background-color: white;
+    width: 90%;
+    height: 220%;
+    position: absolute;
+    right: 0px;
+    border: solid;
+    border-color: royalblue;
+    border-radius: 15px;
+    text-align: right;
+}
+.checkboxes {
+    border: 1px solid red;
+    border-radius: 50%;
+    margin-left: 2%;
+    margin-right: 4%;
+    position: relative;
 }
 .classForm {
     z-index: 100;
@@ -28,13 +74,18 @@
     text-align: center;
     border-radius: 15px;
 }
+.textInput {
+    width: 25vw;
+}
 .exitButton {
+    z-index: 1;
     display: inline;
     position: absolute;
     vertical-align: middle;
     right: 2%;
     top: 2%;
     height: 20px;
+    margin: 1%;
     background-image: url('cross.svg');
     border: 1 1 1 1;
 }
@@ -115,4 +166,31 @@
     position: absolute;
     width: 3vh;
     height: auto;
+}
+.errorBox {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+.notificationBox {
+    z-index: 100;
+    display: none;
+    top: 30%;
+    width: 30%;
+    left: 35%;
+    height: fit-content;
+    text-align: center;
+    position: absolute;
+    border: solid;
+    border-radius: 10px;
+    border-color: red;
+    background-color: white;
+}
+.linkButton {
+    position: relative;
+    right: 2.5%;
+    text-align: center;
+    font-size: xx-large;
+    color: royalblue;
+    margin: 5%;
 }

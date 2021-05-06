@@ -4,9 +4,8 @@ document.getElementById("in").addEventListener("click", (e) =>{
     document.getElementById("error").innerHTML = ""
     if (!document.getElementById("user").value && !document.getElementById("pass").value) {
     } else {
-        b()
-    }
-    
+        l()
+    }  
 })
 
 document.getElementById("up").addEventListener("click", (e) => {
@@ -14,16 +13,15 @@ document.getElementById("up").addEventListener("click", (e) => {
     document.getElementById("error").innerHTML = ""
     if (!document.getElementById("user").value && !document.getElementById("pass").value){
     } else {
-        x()
+        v()
     }
-
 })
 
 async function getId(username) {
-    return await fetch("http://192.168.1.12:3000/gI7a", { method: 'post', body: JSON.stringify({ username: document.getElementById("user").value }) }).then(res => res.json()).then(data => { window.location.href = "main.html?id=" + data })
+    return await fetch("http://192.168.1.12:3000/gI7a", { method: 'post', body: JSON.stringify({ username: document.getElementById("user").value }) }).then(res => res.json()).then(data => { window.location.href = "main.html?noaSD=" + data })
 }
 
-async function x() {
+async function v() {
     let url = "http://192.168.1.12:3000/XpA1"
 
     let todo = {
@@ -67,20 +65,11 @@ async function x() {
         }
     })
     if(response){
-        window.location.href = "main.html?id=" + getId();
+        window.location.href = "main.html?noaSD=" + getId();
     }
-        // switch(res) {
-        //     case 232:
-        //         console.log("2332")
-        //         return true;
-        //     case 231:
-        //         document.getElementById("error").innerHTML = "Username Unavailable"
-        //         return false;
-        //     default://Pass
-        // }
 }
 
-async function b() {
+async function l() {
     let url = "http://192.168.1.12:3000/kasp32"
     
     let todo = {
@@ -122,7 +111,4 @@ async function b() {
         console.log("Id:",getId())
         // window.location.href = "main.html?id=" + getId();
     }
-    
-
-
 }

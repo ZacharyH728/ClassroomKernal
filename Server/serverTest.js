@@ -34,6 +34,18 @@ function jsonReader(filePath, cb) {
     });
 };
 
+function makeid(length) {
+    var result = [];
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        result.push(characters.charAt(Math.floor(Math.random() *
+            charactersLength)));
+    }
+    return result.join('');
+}
+
+
 //Get classes
 app.post('/siZ8', (req, res) => {
     console.log("getting class data")
@@ -57,6 +69,40 @@ app.post('/siZ8', (req, res) => {
         }
     }));
 });
+
+//Deleteing Class
+app.post('/jausP&w', (req, res) => {
+    console.log("deleting Classes")
+    var id = req.body.id;
+    var name = req.body.name;
+    console.log(name)
+    if (jsonReader(file, (err, data) => {
+        if (err) {
+            console.log(err);
+        } else {
+            var n = 0;
+            for (n = 0; n < Object.keys(data).length; n++) {
+                if (data[n].id == id) {
+                    userLocation = n
+                    for (n = 0; n < Object.keys(data[userLocation].classes).length; n++) {
+                        if (data[userLocation].classes[n].name == name) {
+                            console.log(data[userLocation].classes[n].id)
+                            var data2 = fs.readFileSync('test.json');
+                            var json = JSON.parse(data2);
+                            json[location].classes.splice(n,1)
+                            fs.writeFile("test.json", JSON.stringify(json), function (err, result) {
+                                if (err) console.log("error:", err);
+                                else res.sendStatus(230);
+                            });
+
+                        }
+                    }
+                }
+            }
+        }
+    }));
+})
+
 
 //Get ID
 app.post('/gI7a', (req, res) => {
@@ -177,10 +223,11 @@ app.post('/XpA1', (req, res) => {
                     var data1 = fs.readFileSync('test.json');
                     var json = JSON.parse(data1);
                     json.push({
-                        "id": Object.keys(data).length,
+                        "accountNumber": Object.keys(data).length,
+                        "id": makeid(100),
                         "username":newUsername,
                         "password":newPassword,
-                        "classes":{}
+                        "classes":[]
                     });
                     fs.writeFile("test.json", JSON.stringify(json),function (err, result) {
                         if (err) console.log("error:", err);
