@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script defer src="javascript.js"></script>
+        <script src="test.json"></script>
+        <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+        <title>Classroom Kernal</title>
+    </head>
+    <body onload='document.getElementById("login").reset();'>
+        <div id="loginBox" class="loginBox"">
+            <form id="login" style="width: fit-content;">
+                <input class="usernameBox" type="text" id="user" name="user" placeholder="Username">
+                <br>
+                <input class="passwordBox" type="text" id="pass" name="pass" placeholder="Password">
+                <!-- <img src="eye.svg" class="eye" id="togglePassword"></i> -->
+                <br>
+                <input class="signButton" type="submit" id="in" value="Sign In">
+                <input class="signButton" type="submit" id="up" value="Sign Up">
+            </form>
+            <h1 class="errorResponse"id="error"></h1>
+        </div>
+    </body>
+</html>
